@@ -143,12 +143,31 @@
       $collection->setItems(array(0, 1, 2, 3));
       // current position is 0
       $this->assertEquals(1, $collection->getNext());
-      
-      $collection->next(); 
-      $collection->next(); 
+
+      $collection->next();
+      $collection->next();
       // current position is 2
-      
+
       $this->assertEquals(3, $collection->getNext());
+
+    }
+
+    public function testGetPrevious() {
+      $collection = new \Fiv\Collection\BaseCollection();
+      $collection->setItems(array(0, 1, 2, 3));
+      // current position is 0
+      $this->assertEquals(null, $collection->getPrevious());
+
+      $collection->next();
+      // current position is 1
+      $this->assertEquals(0, $collection->getPrevious());
+      
+      $collection->next();
+      $collection->next();
+      // current position is 3
+
+      $this->assertEquals(1, $collection->getPrevious(2));
+      
 
     }
 
