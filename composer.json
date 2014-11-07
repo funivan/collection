@@ -1,6 +1,6 @@
 {
-  "name": "fiv/object-collection",
-  "description": "Abstract class for typed object collection",
+  "name": "fiv/collection",
+  "description": "Easy way to iterate over your data",
   "keywords": [
     "collection"
   ],
